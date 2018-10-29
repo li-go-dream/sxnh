@@ -3,7 +3,6 @@
         <router-link to="/" slot="left">
           <mt-button icon="back">返回</mt-button>
         </router-link>
-        
         <mt-button @click="handleClose">关闭</mt-button>
         <mt-button icon="more" slot="right"></mt-button>
       </mt-header>
@@ -11,35 +10,33 @@
 
 <script>
 export default {
-  
-  data() {
+  data () {
     return {
-      navBarFixed:false
-    };
+      navBarFixed: false
+    }
   },
   methods: {
-    handleClose() {
-      alert('close this page');
+    handleClose () {
+      alert('close this page')
     },
     watchScroll () {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-        //  当滚动超过 50 时，实现吸顶效果
-        if (scrollTop > 49) {
-          this.navBarFixed = true
-        } else {
-          this.navBarFixed = false
-        }
-     }
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      //  当滚动超过 50 时，实现吸顶效果
+      if (scrollTop > 49) {
+        this.navBarFixed = true
+      } else {
+        this.navBarFixed = false
+      }
+    }
   },
   mounted () {
-      // 事件监听滚动条
-      window.addEventListener('scroll', this.watchScroll)
-    },
-    
-};
+    // 事件监听滚动条
+    window.addEventListener('scroll', this.watchScroll)
+  }
+}
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   @component-namespace page {
     @component header {
       @descendent main {
@@ -56,7 +53,6 @@ export default {
     top: 0;
     width: 100%;
     z-index: 999;
-   
   }
-  
+
 </style>

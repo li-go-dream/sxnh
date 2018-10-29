@@ -20,21 +20,16 @@
 </template>
 
 <script>
-
-
 export default {
-  name: 'home',
- 
+  name: 'home'
 }
 </script>
 
 <style lang="scss">
   .mint-swipe-items-wrap{
     height: 200px;
-    
   }
   @component-namespace page {
-   
     @component swipe {
       @descendent desc {
         text-align: center;
@@ -59,7 +54,6 @@ export default {
         color: #fff;
         width:375px;
         height: 200px;
-       
       }
       .is-active{
         height:200px !important;
@@ -80,7 +74,6 @@ export default {
   }
   .nav{
     height:100px;
-    
   }
   .nav ul{
     padding: 10px 0;
@@ -99,7 +92,6 @@ export default {
    font-size: 12px;
    text-align: center;
    line-height: 140px;
-
-  
   }
+
 </style>

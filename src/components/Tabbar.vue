@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <router-view></router-view>
     <div class="sx-tabber">
       <router-link
       v-for="item in routes"
@@ -12,7 +10,6 @@
       <span>{{item.text}}</span>
       </router-link>
     </div>
-  </div>
 </template>
 
 <script>
@@ -31,12 +28,7 @@ export default {
   @import url('./icon/iconfont.scss');
   .sx-tabber{
     display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 64px;
-
+    border-top: 1px solid #cccccc;
     &>div{
       display: flex;
       flex-direction: column;
