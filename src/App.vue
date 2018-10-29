@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="sx-body">
     <Header></Header>
+    <router-view class="sx-body-content"></router-view>
     <tabbar></tabbar>
   </div>
 </template>
@@ -19,4 +20,15 @@ export default {
 
 <style lang="scss">
 @import url('./reset/reset.scss');
+.sx-body{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  &-content{
+   
+  }
+}
+.sx-body-content{
+ flex: 1;
+}
 </style>
