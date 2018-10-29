@@ -1,42 +1,45 @@
 <template>
      <mt-header title="书香年华"  :class="navBarFixed == true ? 'navBarWrap' :''">
         <router-link to="/" slot="left">
-          <mt-button icon="back">返回</mt-button>
+           <i class="icon iconfont icon-saoyisao"></i>
         </router-link>
-        <mt-button @click="handleClose">关闭</mt-button>
-        <mt-button icon="more" slot="right"></mt-button>
+        <mt-button icon="xiaoxi" slot="right"> <i class="icon iconfont icon-xiaoxi"></i></mt-button>
       </mt-header>
 </template>
 
 <script>
+
 export default {
-  data () {
+  
+  data() {
     return {
-      navBarFixed: false
-    }
+      navBarFixed:false
+    };
   },
   methods: {
-    handleClose () {
-      alert('close this page')
+    handleClose() {
+      alert('close this page');
     },
     watchScroll () {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      //  当滚动超过 50 时，实现吸顶效果
-      if (scrollTop > 49) {
-        this.navBarFixed = true
-      } else {
-        this.navBarFixed = false
-      }
-    }
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        //  当滚动超过 50 时，实现吸顶效果
+        if (scrollTop > 19) {
+          this.navBarFixed = true
+        } else {
+          this.navBarFixed = false
+        }
+     }
   },
   mounted () {
-    // 事件监听滚动条
-    window.addEventListener('scroll', this.watchScroll)
-  }
-}
+      // 事件监听滚动条
+      window.addEventListener('scroll', this.watchScroll)
+    },
+    
+};
 </script>
 
-<style lang="css" scoped>
+<style lang="scss">
+@import url('./head-icon/head.scss');
   @component-namespace page {
     @component header {
       @descendent main {
@@ -53,6 +56,7 @@ export default {
     top: 0;
     width: 100%;
     z-index: 999;
+   
   }
-
+  
 </style>

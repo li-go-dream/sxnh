@@ -24,11 +24,9 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  &-content{
-   
-  }
 }
 .sx-body-content{
  flex: 1;
+ overflow-y: auto;
 }
 </style>
