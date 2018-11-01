@@ -1,4 +1,4 @@
-const My = () => import('@/pages/My')
+const My = () => import('@/pages/My/My')
 const Mall = () => import('@/pages/Mall')
 const Home = () => import('@/pages/Home')
 const Cart = () => import('@/pages/Cart')
@@ -12,7 +12,7 @@ const Science = () => import('@/pages/mall_pages/Science')
 const Culture = () => import('@/pages/mall_pages/Culture')
 const Life = () => import('@/pages/mall_pages/Life')
 const Custom = () => import('@/pages/mall_pages/Custom')
-
+const Login = () => import('@/pages/Login/Login.vue')
 export default [
   {
     path: '/',
@@ -31,7 +31,7 @@ export default [
     component: Mall,
     text: '分类',
     isTabbar: true,
-    children:[{
+    children: [{
       path: 'literature',
       name: 'literature',
       component: Literature,
@@ -91,20 +91,32 @@ export default [
       component: Custom,
       text: '书香定制'
     }
-   ]
+    ]
   },
   {
     path: '/cart',
     name: 'cart',
     component: Cart,
     text: '购物车',
-    isTabbar: true
+    isTabbar: true,
+    meta: {
+      authRequired: true
+    }
   },
   {
     path: '/my',
     name: 'my',
     component: My,
     text: '我',
-    isTabbar: true
+    isTabbar: true,
+    meta: {
+      authRequired: true
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    text: '登录'
   }
 ]
