@@ -122,11 +122,12 @@ export default {
             width: 28%;
             height: 25px;
             line-height: 25px;
-            border: 1px solid red;
+            color: #070606;
           }
         }
         height: 100px;
-        border: 1px solid red;
+        // border-top: 1px solid rgb(85, 81, 81);
+        border-bottom: 1px solid rgb(85, 81, 81);
         &>img{
           display: inline-block;
           height: 90px;
@@ -146,7 +147,7 @@ export default {
       display: flex;
       font-size: 15px;
       justify-content: space-between;
-      border: 1px solid red;
+      background-color: #cccccc;
       margin: 0 3px;
       &>.check{
         &>input{

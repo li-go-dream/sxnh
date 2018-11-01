@@ -3,7 +3,6 @@ const Mall = () => import('@/pages/Mall')
 const Home = () => import('@/pages/Home')
 const Cart = () => import('@/pages/Cart')
 
-
 const Login = () => import('@/pages/Login/Login.vue')
 
 const List = () => import('@/pages/List')
@@ -53,7 +52,6 @@ export default [
     name: 'login',
     component: Login,
     text: '登录'
-    isTabbar: true
   },
   {
     path: '/list/:id',

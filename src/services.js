@@ -2,7 +2,7 @@ import axios from 'axios'
 import { Indicator } from 'mint-ui'
 
 const ajax1 = axios.create({
-  baseURL: "http://rap2api.taobao.org/app/mock/85801"
+  baseURL: 'http://rap2api.taobao.org/app/mock/85801'
 })
 export const getLunbo = () => ajax1.get('/api/v1/shouye')
 export const gettoday = () => ajax1.get('/api/v1/today')
@@ -28,4 +28,3 @@ ajax.interceptors.response.use((resp) => {
 
 export const getDetailList = (id) => ajax.get(`api/classification/${id}`)
 export const getDetail = (id) => ajax.get(`api/detail/${id}`)
-

@@ -26,28 +26,26 @@
 </template>
 
 <script>
-import{mapMutations} from 'vuex'
+import {mapMutations} from 'vuex'
 export default {
   name: 'my',
-  data(){
-    return{
-      myList:[],
+  data () {
+    return {
+      myList: [],
       username: ''
     }
   },
-  mounted() {
-   this.$ajax.getMylist()
-   .then((resp)=>{
-     this.myList = resp.data.data;
-    
-   })
-  this.username=window.localStorage.getItem('username')
+  mounted () {
+    this.$ajax.getMylist()
+      .then((resp) => {
+        this.myList = resp.data.data
+      })
+    this.username = window.localStorage.getItem('username')
   },
-  methods:{
-
+  methods: {
     ...mapMutations(['logout']),
-    logout1(){     
-      this.logout();
+    logout1 () {
+      this.logout()
       this.$router.push('/login')
     }
   }
@@ -74,7 +72,6 @@ export default {
 .sx-middle{
   width: 90%;
   height: 90px;
-  
   margin: 10px 17px;
   &>.ul1{
     display: flex;
@@ -85,7 +82,6 @@ export default {
      margin:0 8px;
    }
   }
-   
   }
   &>.ul2{
     display: flex;
@@ -95,7 +91,7 @@ export default {
      margin:0 4px;
    }
   }
-  } 
+  }
 }
 .sx-btn{
   border-style: none;

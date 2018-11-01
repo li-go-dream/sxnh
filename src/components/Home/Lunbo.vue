@@ -11,19 +11,17 @@
 <script>
 export default {
   name: 'Swipper',
-     data () {
-      return{
-        swipData:{}
-      }
-      
-    },
-    mounted(){
-      this.$ajax.getLunbo()
-      .then((resp)=>{
-        this.swipData=resp.data.data
-       
-      })
+  data () {
+    return {
+      swipData: {}
     }
+  },
+  mounted () {
+    this.$ajax.getLunbo()
+      .then((resp) => {
+        this.swipData = resp.data.data
+      })
+  }
 }
 </script>
 
@@ -35,7 +33,6 @@ export default {
     height: 200px;
   }
   @component-namespace page {
-   
     @component swipe {
       @descendent desc {
         text-align: center;
@@ -54,13 +51,11 @@ export default {
         width:375px;
         height: 200px;
       }
-
       .slide1 {
         background-color: #0089dc;
         color: #fff;
         width:375px;
         height: 200px;
-       
       }
       .is-active{
         height:200px !important;

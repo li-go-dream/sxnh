@@ -12,16 +12,15 @@
 
 <script>
 export default {
- name: "Nav"
+  name: 'Nav'
 }
 </script>
 
 <style lang="scss" >
-.nav{
+  .nav{
     height:100px;
     background: white;
     margin-bottom: 5px;
-    
   }
   .nav ul{
     padding: 10px 0;

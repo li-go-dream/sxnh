@@ -21,14 +21,14 @@ export default {
       alert('close this page')
     },
     watchScroll () {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-        //  当滚动超过 19 时，实现吸顶效果
-        if (scrollTop > 19) {
-          this.navBarFixed = true
-        } else {
-          this.navBarFixed = false
-        }
-     }
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      //  当滚动超过 19 时，实现吸顶效果
+      if (scrollTop > 19) {
+        this.navBarFixed = true
+      } else {
+        this.navBarFixed = false
+      }
+    }
   },
   mounted () {
     // 事件监听滚动条

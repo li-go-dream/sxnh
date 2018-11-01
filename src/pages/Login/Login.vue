@@ -1,39 +1,39 @@
 <template>
     <div>
         <img src="./img/login.gif" style="width:100%"/>
-       <mt-field label="用户名" v-model="username"    placeholder="请输入用户名"></mt-field>
-            
-        <mt-field label="密码"  placeholder="请输入密码" v-model="password"    type="password"></mt-field>
+        <mt-field label="用户名" v-model="username" placeholder="请输入用户名"></mt-field>
+        <mt-field label="密码"  placeholder="请输入密码" v-model="password" type="password"></mt-field>
         <p class="forget">忘记密码</p>
-       <mt-button type="danger" class="btn" @click="login">登录</mt-button>
+        <mt-button type="danger" class="btn" @click="login">登录</mt-button>
     </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   name: 'login',
-    data () {
+  data () {
     return {
-      username:'',
-      password:''
+      username: '',
+      password: ''
     }
   },
-  methods:{
+  methods: {
     ...mapActions(['postLogin']),
     login () {
-        if(this.username=="" || this.password ==""){
-            alert("请输入正确的信息")
-        }else{
-        this.postLogin({username:this.username,password:this.password})
-        window.localStorage.setItem("username",this.username)
+      if (this.username === '' || this.password === '') {
+        alert('请输入正确的信息')
+      } else {
+        this.postLogin({username: this.username, password: this.password})
+        window.localStorage.setItem('username', this.username)
         this.$router.push('/Home')
-        }
-    },
+      }
+    }
   }
-  
 }
- </script>
+</script>
+
 <style lang="scss" scoped>
 .log{
     background: white;

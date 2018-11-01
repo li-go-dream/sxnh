@@ -2,7 +2,16 @@
     <div class="books">
       <h3>党政读物</h3>
       <ul>
-        <li v-for="item in BooksData" :key="item.id"><img :src="item.url"/><p>{{item.title}}</p><span class="money">￥{{item.price}}</span></li>
+        <router-link
+        v-for="item in BooksData"
+        :key="item.id" :to="`/details/${item.id}`"
+        tag="li"><img :src="item.url"
+        />
+        <p>{{item.title}}</p>
+        <span class="money">
+          ￥{{item.price}}
+        </span>
+        </router-link>
       </ul>
     </div>
 </template>
@@ -10,18 +19,17 @@
 <script>
 export default {
   name: 'books',
-  data(){
-    return{
-      BooksData:{}
+  data () {
+    return {
+      BooksData: {}
     }
   },
-  mounted() {
+  mounted () {
     this.$ajax.getbooks()
-    .then((resp)=>{
-      this.BooksData = resp.data.data
-      
-    })
-  },
+      .then((resp) => {
+        this.BooksData = resp.data.data
+      })
+  }
 }
 </script>
 

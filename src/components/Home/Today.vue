@@ -8,29 +8,24 @@
           <span>{{TodayData.des}}</span>
           <p class="price">￥{{TodayData.price}}</p>
         </div>
-      
       </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Today",
-    data(){
-      return{
-        TodayData:{}
-      }
-    },
-    mounted() {
-       this.$ajax.gettoday()
-       .then((resp)=>{
-         this.TodayData = resp.data.data
-         //console.log(resp)
-       })
-    },
-   
-
-
+  name: 'Today',
+  data () {
+    return {
+      TodayData: {}
+    }
+  },
+  mounted () {
+    this.$ajax.gettoday()
+      .then((resp) => {
+        this.TodayData = resp.data.data
+      })
+  }
 }
 </script>
 
@@ -38,10 +33,8 @@ export default {
 .today{
     width: 100%;
     height: 150px;
-   
     background: white;
     margin-bottom: 10px;
-    
   &>h3{
     font-size: 14px;
     font-weight: 600;
@@ -58,12 +51,11 @@ export default {
     font-size: 12px;
   &>h4{
     font-size: 13px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
   }
   &>span{
     color: #a8a4a4;
     font-size: 12px;
-
   }
   &>.price{
     color: rgb(202, 8, 8);

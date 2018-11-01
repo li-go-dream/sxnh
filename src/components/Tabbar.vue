@@ -6,7 +6,7 @@
       :to="item.path"
       tag="div"
       >
-      <span v-if="item.path === '/cart'">{{totalCount | maxnumber}}</span>
+      <span v-if="item.path === '/cart' ">{{totalCount | maxnumber}}</span>
       <i :class="`icon iconfont icon-${item.name}`"></i>
       <span>{{item.text}}</span>
       </router-link>
