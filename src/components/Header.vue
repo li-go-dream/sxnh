@@ -10,15 +10,15 @@
 <script>
 
 export default {
-  
-  data() {
+
+  data () {
     return {
-      navBarFixed:false
-    };
+      navBarFixed: false
+    }
   },
   methods: {
-    handleClose() {
-      alert('close this page');
+    handleClose () {
+      alert('close this page')
     },
     watchScroll () {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
@@ -31,11 +31,10 @@ export default {
      }
   },
   mounted () {
-      // 事件监听滚动条
-      window.addEventListener('scroll', this.watchScroll)
-    },
-    
-};
+    // 事件监听滚动条
+    window.addEventListener('scroll', this.watchScroll)
+  }
+}
 </script>
 
 <style lang="scss">
@@ -56,7 +55,5 @@ export default {
     top: 0;
     width: 100%;
     z-index: 999;
-   
   }
-  
 </style>

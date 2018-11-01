@@ -7,6 +7,7 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import * as ajax from './services'
 import store from './store'
+
 router.beforeEach((to, from, next) => {
   if (to.meta.authRequired) {
     if (!store.state.isLogin) {
@@ -22,6 +23,7 @@ router.beforeEach((to, from, next) => {
   }
 })
 Vue.prototype.$ajax = ajax
+
 Vue.config.productionTip = false
 Vue.use(MintUI)
 

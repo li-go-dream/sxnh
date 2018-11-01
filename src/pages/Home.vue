@@ -13,7 +13,6 @@
       </mt-swipe>
     </div>
      <Books/>
-    
   </div>
 </template>
 
@@ -27,7 +26,6 @@ export default {
   name: 'home',
   data(){
     return{
-
     }
   },
   components:{
@@ -40,4 +38,121 @@ export default {
 }
 </script>
 <style lang="scss">
+=======
+  .nav{
+    height:100px;
+    background: white;
+    margin-bottom: 5px;
+  }
+  .nav ul{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around ;
+
+  }
+  .nav ul li{
+   width: 60px;
+   height: 60px;
+   background: rgb(161, 4, 4);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   font-size: 12px;
+   text-align: center;
+   line-height: 140px;
+  }
+  .today{
+    width: 100%;
+    height: 150px;
+    background: white;
+    margin-bottom: 10px;
+    &>h3{
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &>.item{
+      margin-top:16px;
+      display: flex;
+      justify-content:space-around;
+      img{
+        width: 100px;
+        height: 80px;
+      }
+      &>.words{
+        font-size: 12px;
+        &>h4{
+          font-size: 13px;
+          margin-bottom: 10px;
+        }
+        &>span{
+          color: #a8a4a4;
+          font-size: 12px;
+        }
+        &>.price{
+          color: rgb(202, 8, 8);
+          margin-left: 171px;
+          margin-top:21px;
+        }
+      }
+    }
+  }
+  .quality{
+    width: 100%;
+    height: 160px;
+    background: white;
+    &>h3{
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &>ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top:5px;
+      &>li{
+        &>p{
+          font-size: 12px;
+        }
+        &>img{
+          width: 70px;
+          height: 80px;
+        }
+        &>.money{
+          color: rgb(212, 9, 9);
+        }
+        &>.money2{
+          margin-top:17px;
+        }
+      }
+    }
+  }
+  .books{
+    width: 100%;
+    height: 280px;
+    background: white;
+    &>h3{
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &>ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top:5px;
+    flex-wrap: wrap;
+      &>li{
+        &>p{
+          font-size: 12px;
+        }
+        &>img{
+          width: 70px;
+          height: 80px;
+        }
+        &>.money{
+          color: rgb(212, 9, 9);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
 </style>

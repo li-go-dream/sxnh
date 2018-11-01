@@ -1,3 +1,6 @@
 export default {
-  LOGIN: 'login'
+  LOGIN: 'login',
+  ADDCOUNT: 'addcount',
+  REDUCECOUNT: 'reducecount',
+  ADD_TO_CART: 'addtocart'
 }
