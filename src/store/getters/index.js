@@ -1,4 +1,5 @@
 export default {
+
   totalPrice (state) {
     return state.cart.reduce((result, item) => {
       result += item.price * item.count

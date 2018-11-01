@@ -1,8 +1,10 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
-import state from './state'
+
+import actions from './actions'
 import getters from './getters'
 import mutations from './mutations'
+import state from './state'
 
 Vue.use(Vuex)
 
@@ -14,8 +16,10 @@ const syncStorage = store => store.subscribe((mutation, s) => {
 const plugins = [syncStorage]
 
 export default new Vuex.Store({
+  actions,
   state,
   getters,
   mutations,
   plugins
+
 })

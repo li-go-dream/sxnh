@@ -1,5 +1,15 @@
+
 import types from '../mutationsTypes'
 export default {
+   postLogin (state, token) {
+    state.isLogin = true
+    window.localStorage.setItem('token', token)
+  },
+  logout (state) {
+    state.isLogin = false
+    window.localStorage.removeItem('token')
+    window.localStorage.removeItem('username')
+  },
   [types.ADDCOUNT] (state, id) {
     state.cart.map(item => {
       if (item.id === id) {

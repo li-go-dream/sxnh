@@ -8,10 +8,25 @@ import 'mint-ui/lib/style.css'
 import * as ajax from './services'
 import store from './store'
 
+router.beforeEach((to, from, next) => {
+  if (to.meta.authRequired) {
+    if (!store.state.isLogin) {
+      next({
+        name: 'login',
+        params: { to }
+      })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
 Vue.prototype.$ajax = ajax
 
 Vue.config.productionTip = false
 Vue.use(MintUI)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

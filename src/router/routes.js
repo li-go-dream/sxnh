@@ -1,7 +1,11 @@
-const My = () => import('@/pages/My')
+const My = () => import('@/pages/My/My')
 const Mall = () => import('@/pages/Mall')
 const Home = () => import('@/pages/Home')
 const Cart = () => import('@/pages/Cart')
+
+
+const Login = () => import('@/pages/Login/Login.vue')
+
 const List = () => import('@/pages/List')
 const Details = () => import('@/pages/Details')
 
@@ -29,13 +33,26 @@ export default [
     name: 'cart',
     component: Cart,
     text: '购物车',
-    isTabbar: true
+    isTabbar: true,
+    meta: {
+      authRequired: true
+    }
   },
   {
     path: '/my',
     name: 'my',
     component: My,
     text: '我',
+    isTabbar: true,
+    meta: {
+      authRequired: true
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+    text: '登录'
     isTabbar: true
   },
   {
@@ -47,5 +64,6 @@ export default [
     path: '/details/:id',
     name: 'detail',
     component: Details
+
   }
 ]

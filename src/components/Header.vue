@@ -1,6 +1,6 @@
 <template>
      <mt-header title="书香年华"  :class="navBarFixed == true ? 'navBarWrap' :''">
-        <router-link to="/" slot="left">
+        <router-link to="" slot="left">
            <i class="icon iconfont icon-saoyisao"></i>
         </router-link>
         <mt-button icon="xiaoxi" slot="right"> <i class="icon iconfont icon-xiaoxi"></i></mt-button>
@@ -21,14 +21,14 @@ export default {
       alert('close this page')
     },
     watchScroll () {
-      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      //  当滚动超过 50 时，实现吸顶效果
-      if (scrollTop > 19) {
-        this.navBarFixed = true
-      } else {
-        this.navBarFixed = false
-      }
-    }
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+        //  当滚动超过 19 时，实现吸顶效果
+        if (scrollTop > 19) {
+          this.navBarFixed = true
+        } else {
+          this.navBarFixed = false
+        }
+     }
   },
   mounted () {
     // 事件监听滚动条
